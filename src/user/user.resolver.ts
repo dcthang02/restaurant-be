@@ -10,9 +10,8 @@ export class UserResolver {
   constructor(private userService: UserService) {}
 
   @UseGuards(MyAuthGuard)
-  @Query((returns) => String)
+  @Query((returns) => UserType)
   profile(@GetUser() user) {
-    console.log(user);
-    return '123';
+    return user;
   }
 }

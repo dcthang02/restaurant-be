@@ -5,6 +5,10 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { RestaurantModule } from './restaurant/restaurant.module';
+import { DishModule } from './dish/dish.module';
+import { CartModule } from './cart/cart.module';
+import { RecipeModule } from './recipe/recipe.module';
 
 @Module({
   imports: [
@@ -26,6 +30,10 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
     }),
     UserModule,
     AuthModule,
+    RestaurantModule,
+    DishModule,
+    CartModule,
+    RecipeModule,
   ],
 })
 export class AppModule {}

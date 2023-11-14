@@ -13,12 +13,12 @@ export class AuthResolver {
   }
 
   @Mutation((returns) => TokenType)
-  signup(@Args('AuthInput') authInput: AuthInput) {
+  signup(@Args('authInput') authInput: AuthInput) {
     return this.authService.createUser(authInput);
   }
 
   @Mutation((returns) => TokenType)
-  signin(@Args('AuthInput') authInput: AuthInput) {
+  signin(@Args('authInput') authInput: AuthInput) {
     return this.authService.signin(authInput);
   }
 }
