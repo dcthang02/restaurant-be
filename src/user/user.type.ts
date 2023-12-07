@@ -5,9 +5,12 @@ export class UserType {
   @Field(() => ID)
   _id: string;
 
-  @Field()
-  username: string;
+  @Field({ nullable: true })
+  phone: string;
 
-  @Field()
-  password: string;
+  @Field({ nullable: true })
+  email: string;
+
+  @Field({ nullable: true })
+  image: string;
 }
